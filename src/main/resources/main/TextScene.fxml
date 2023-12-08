@@ -81,7 +81,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <TextField>
+                        <TextField fx:id="textEditor" onAction="#sendText">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -101,13 +101,13 @@
                <children>
                   <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <VBox prefHeight="200.0" prefWidth="303.0">
+                        <VBox fx:id="messageBox" prefHeight="200.0" prefWidth="303.0">
                            <children>
-                              <HBox prefHeight="0.0" prefWidth="333.0">
+                              <HBox fx:id="textCell" prefHeight="0.0" prefWidth="333.0" styleClass="text-cell" stylesheets="@style.css">
                                  <children>
-                                    <VBox alignment="BOTTOM_CENTER">
+                                    <VBox fx:id="imageContainer" alignment="BOTTOM_CENTER" styleClass="image-container">
                                        <children>
-                                          <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE">
+                                          <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="profile-pic">
                                              <VBox.margin>
                                                 <Insets left="5.0" right="5.0" />
                                              </VBox.margin>
@@ -117,9 +117,9 @@
                                           <Insets left="5.0" right="5.0" />
                                        </HBox.margin>
                                     </VBox>
-                                    <HBox prefHeight="30.0" prefWidth="39.0" style="-fx-background-color: pink; -fx-background-radius: 15;">
+                                    <HBox prefHeight="30.0" prefWidth="39.0" style="-fx-background-color: pink; -fx-background-radius: 15;" styleClass="message-container">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" wrappingWidth="156.0" HBox.hgrow="ALWAYS">
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" wrappingWidth="156.0" HBox.hgrow="ALWAYS">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -132,40 +132,6 @@
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </padding>
                                     </HBox>
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="5.0" top="5.0" />
-                                 </padding>
-                              </HBox>
-                              <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="333.0">
-                                 <children>
-                                    <HBox prefHeight="30.0" prefWidth="39.0" style="-fx-background-color: pink; -fx-background-radius: 15;">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" wrappingWidth="156.0" HBox.hgrow="ALWAYS">
-                                             <HBox.margin>
-                                                <Insets />
-                                             </HBox.margin>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                       </padding>
-                                    </HBox>
-                                    <VBox alignment="BOTTOM_CENTER">
-                                       <children>
-                                          <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE">
-                                             <VBox.margin>
-                                                <Insets left="5.0" right="5.0" />
-                                             </VBox.margin>
-                                          </Circle>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets left="5.0" right="5.0" />
-                                       </HBox.margin>
-                                    </VBox>
                                  </children>
                                  <padding>
                                     <Insets bottom="5.0" top="5.0" />
