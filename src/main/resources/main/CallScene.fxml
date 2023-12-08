@@ -12,23 +12,23 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" text="Button" />
-                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" text="Button" />
-                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" text="Button" />
+                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" style="-fx-background-radius: 80;" text="Button" />
+                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" style="-fx-background-radius: 80;" text="Button" />
+                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" style="-fx-background-radius: 80;" text="Button" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" text="Button" />
-                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" text="Button" />
-                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" text="Button" />
+                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" style="-fx-background-radius: 80;" text="Button" />
+                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" style="-fx-background-radius: 80;" text="Button" />
+                  <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" style="-fx-background-radius: 80;" text="Button" />
                </children>
             </HBox>
          </children>
       </VBox>
       <HBox alignment="CENTER" layoutX="14.0" layoutY="433.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#endCall" text="Button" />
+            <Button minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#endCall" style="-fx-background-radius: 80;" text="Button" />
          </children>
       </HBox>
       <VBox alignment="CENTER" layoutY="63.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">

@@ -1,10 +1,14 @@
 package com.messagegui.Components;
 
 import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Text;
@@ -46,20 +50,22 @@ public class TextCell {
         textContainer = new HBox();
         textContainer.setPrefHeight(30.0);
         textContainer.setPrefWidth(39.0);
+        textContainer.setAlignment(Pos.CENTER);
         textContainer.setStyle("-fx-background-color: pink; -fx-background-radius: 15;");
         textContainer.getStyleClass().add("message-container");
 
         messageText = new Text();
         messageText.setStrokeType(StrokeType.OUTSIDE);
         messageText.setStrokeWidth(0.0);
-        messageText.setWrappingWidth(156.0);
+        messageText.setWrappingWidth(100);
         HBox.setHgrow(messageText, Priority.ALWAYS);
         messageText.getStyleClass().add("text");
 
         textContainer.getChildren().add(messageText);
-        if (!textFrom) {
+        if (!fromText) {
             textCell.setAlignment(Pos.CENTER_LEFT);
             textCell.getChildren().addAll(imageContainer, textContainer);
+            System.out.println(fromText);
         } else {
             textCell.setAlignment(Pos.CENTER_RIGHT);
             textCell.getChildren().addAll(textContainer, imageContainer);
@@ -69,6 +75,14 @@ public class TextCell {
 
     public HBox getTextCell() {
         return textCell;
+    }
+
+    public void setProfilePic(Circle profilePic) {
+        this.profilePic = profilePic;
+    }
+
+    public Circle getProfilePic() {
+        return profilePic;
     }
 
     public void setText(String content) {
