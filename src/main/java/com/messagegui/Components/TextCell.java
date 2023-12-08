@@ -22,7 +22,7 @@ public class TextCell {
         textCell = new HBox();
         textCell.setPrefHeight(0.0);
         textCell.setPrefWidth(333.0);
-        textCell.getStylesheets().add("/main/style.css");
+        textCell.getStylesheets().add(String.valueOf(getClass().getResource("/main/style.css")));
         textCell.getStyleClass().add("text-cell");
 
         imageContainer = new VBox();

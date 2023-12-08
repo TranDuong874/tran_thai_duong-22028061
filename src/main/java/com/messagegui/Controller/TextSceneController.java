@@ -34,12 +34,14 @@ public class TextSceneController extends BaseController{
     static int cnt = 1;
     @FXML
     public void sendText() {
-        if (cnt % 3 == 2) {
+        if (cnt % 3 == 1) {
             currentSender = !currentSender;
         }
+        cnt++;
         String content = textEditor.getText();
         TextCell textCell = new TextCell(currentSender, content);
         messageBox.getChildren().add(textCell.getTextCell());
+        textEditor.clear();
         textHistory.add(textCell);
     }
 

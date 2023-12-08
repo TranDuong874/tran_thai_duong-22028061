@@ -1,9 +1,11 @@
 .profile-pic {
-    
+
 }
 
 .message-container {
-
+    -fx-background-color: pink;
+    -fx-background-radius: 15;
+    -fx-padding: 5 8 5 8;
 }
 
 .text {
@@ -11,9 +13,9 @@
 }
 
 .image-container {
-
+    -fx-padding: 0 5 0 5;
 }
 
 .text-cell {
-
+    -fx-padding: 5 0 5 0;
 }
