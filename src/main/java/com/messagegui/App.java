@@ -1,5 +1,6 @@
 package com.messagegui;
 
+import com.messagegui.Controller.TextSceneController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,18 +9,29 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class App extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/TextScene.fxml"));
-        fxmlLoader = new FXMLLoader(getClass().getResource("/main/ContactScene.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setResizable(false);
-        stage.setWidth(335);
-        stage.setHeight(600);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+
+    private static Stage primaryStage;
+
+    public static Stage getPrimaryStage() {
+        return primaryStage;
     }
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        this.primaryStage = primaryStage;
+
+        TextSceneController initSC = SceneManager.getInstance().textScene;
+
+        Scene scene = new Scene(SceneManager.getInstance().textScene.getRoot());
+
+        primaryStage.setResizable(false);
+        primaryStage.setWidth(335);
+        primaryStage.setHeight(600);
+        primaryStage.setTitle("Hello!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
 
     public static void main(String[] args) {
         launch();
