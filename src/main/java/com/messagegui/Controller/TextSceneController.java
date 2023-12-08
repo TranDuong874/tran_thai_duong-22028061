@@ -34,7 +34,7 @@ public class TextSceneController extends BaseController{
     static int cnt = 1;
     @FXML
     public void sendText() {
-        if (cnt % 3 == 1) {
+        if (cnt % 2 == 1) {
             currentSender = !currentSender;
         }
         cnt++;

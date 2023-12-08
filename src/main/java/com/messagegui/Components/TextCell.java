@@ -19,6 +19,11 @@ public class TextCell {
     private final int maxWrappingWidth = 200;
 
     public TextCell() {
+
+
+    }
+
+    public TextCell(boolean fromText, String content) {
         textCell = new HBox();
         textCell.setPrefHeight(0.0);
         textCell.setPrefWidth(333.0);
@@ -52,11 +57,13 @@ public class TextCell {
         messageText.getStyleClass().add("text");
 
         textContainer.getChildren().add(messageText);
-        textCell.getChildren().addAll(imageContainer, textContainer);
-    }
-
-    public TextCell(boolean fromText, String content) {
-        this();
+        if (!textFrom) {
+            textCell.setAlignment(Pos.CENTER_LEFT);
+            textCell.getChildren().addAll(imageContainer, textContainer);
+        } else {
+            textCell.setAlignment(Pos.CENTER_RIGHT);
+            textCell.getChildren().addAll(textContainer, imageContainer);
+        }
         setText(content);
     }
 
